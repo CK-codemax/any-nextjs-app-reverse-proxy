@@ -26,11 +26,15 @@ This setup consists of two main components:
 
 1. Clone this repository:
    ```bash
-   git clone <this-repo-url>
+   git clone https://github.com/CK-codemax/any-nextjs-app-reverse-proxy.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
    cd any-nextjs-app-reverse-proxy
    ```
 
-2. Modify the GitHub repository URL in both files:
+3. Modify the GitHub repository URL in both files:
 
    a. In `docker-compose.yml`:
    ```yaml
@@ -50,7 +54,7 @@ This setup consists of two main components:
 
    > **Important**: Make sure to update the repository URL in both files to match your Next.js application repository.
 
-3. Build and start the containers in detached mode:
+4. Build and start the containers in detached mode:
    ```bash
    docker-compose up --build -d
    ```
@@ -61,13 +65,13 @@ This setup consists of two main components:
    > - Build the Next.js application
    > - Start both the Next.js and Nginx containers
 
-4. Check if containers are running:
+5. Check if containers are running:
    ```bash
    docker ps -a
    ```
    You should see both `nextjs-app` and `reverse-proxy` containers in the list. The status should be "Up" for both containers.
 
-5. Once the containers are running, you can access your application at:
+6. Once the containers are running, you can access your application at:
    ```
    http://localhost
    ```
